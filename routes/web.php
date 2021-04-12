@@ -17,4 +17,9 @@ Route::get('/', function () {
     return view('register');
 });
 
+
+
 Route::post('/register', 'userController@store');
+Route::get('/search', 'userController@index');
+Route::get('/search/info', 'userController@info')->name('search.info');
+
