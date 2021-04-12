@@ -40,7 +40,7 @@ class userController extends Controller
         $user =User::create($request->all());
         $user->save();
 
-        return redirect('/user');
+        return redirect('search');
     }
 
     /**
@@ -136,4 +136,5 @@ class userController extends Controller
             }
         
     }
+
 }
