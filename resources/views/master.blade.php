@@ -238,6 +238,14 @@ $(document).ready(function(){
   var query = $(this).val();
   fetch_customer_data(query);
  });
+
+$(document).on('change', '#status', function(){
+    
+
+  var query = $(this).val();
+  fetch_customer_data(query);
+ });
+
 });
 </script>
 

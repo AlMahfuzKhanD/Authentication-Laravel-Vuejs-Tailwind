@@ -99,6 +99,7 @@ class userController extends Controller
                     $data = DB::table('users')
                     ->where('status', 'like', '%' . $query . '%')
                     ->orWhere('firstName', 'like', '%' . $query . '%')
+                    ->orWhere('status', $query)
                         
                         ->orderBy('id', 'asc')
                         ->get();

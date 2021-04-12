@@ -5,16 +5,22 @@
 
 <form action="">
 <div class="form-group form-control">
-
-    <input type="text" id="search" name="search" class="form-control" placeholder="Search" >
-
-    {{-- onchange="showUser(this.value)" --}}
-    {{-- <select  name="status" id="table" >
+  <div class="row">
+    <div class="col-sm-6"><input type="text" id="search" name="search" class="form-control" placeholder="Search" ></div>
+    <div class="col-sm-6">
+      <select  name="status" id="status" class="form-control" >
 
         <option value="Active">Active</option>
         <option value="Inactive">Inactive</option>
 
-    </select> --}}
+    </select>
+    </div>
+  </div>
+
+    
+
+    {{-- onchange="showUser(this.value)" --}}
+    
 
     {{-- <div id="txtHint"><b>Person info will be listed here...</b></div> --}}
 
