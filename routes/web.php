@@ -22,3 +22,10 @@ Route::post('register',[AuthController::class,'register']);
 // logout route
 Route::post('logout',[AuthController::class,'logout'])->name('logout');
 
+// forgot password routes
+Route::get('/forgot-password',[AuthController::class,'showForgotPasswordForm'])->name('forgot-password');
+Route::post('/forgot-password',[AuthController::class,'sendResetLink']);
+Route::get('/reset-password/{token}', [AuthController::class, 'showResetForm'])
+    ->name('password.reset');
+
+
