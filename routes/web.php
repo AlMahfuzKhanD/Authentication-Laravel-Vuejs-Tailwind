@@ -25,7 +25,6 @@ Route::post('logout',[AuthController::class,'logout'])->name('logout');
 // forgot password routes
 Route::get('/forgot-password',[AuthController::class,'showForgotPasswordForm'])->name('forgot-password');
 Route::post('/forgot-password',[AuthController::class,'sendResetLink']);
-Route::get('/reset-password/{token}', [AuthController::class, 'showResetForm'])
-    ->name('password.reset');
-
+Route::get('/reset-password/{token}', [AuthController::class, 'showResetForm'])->name('password.reset');
+Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('password.update');
 
